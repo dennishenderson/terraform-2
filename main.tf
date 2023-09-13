@@ -4,5 +4,5 @@ provider "aws" {
 
 resource "aws_instance" "myec2" {
   ami           = "ami-00a9282ce3b5ddfb1"
-  instance_type = lookup(var.instance_type, terraform.workspace)
+  instance_type = var.instance_type
 }
